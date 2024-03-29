@@ -13,12 +13,12 @@ export default defineConfig({
       }
     }
   },
-  build: {
-    rollupOptions: {
-      input: {
-        main: resolve(__dirname, 'dist/index.html'),
-        nested: resolve(__dirname, 'nested/index.html')
-      }
-    }
-  }
+  // build: {
+  //   rollupOptions: {
+  //     input: {
+  //       main: resolve(__dirname, 'dist/index.html'),
+  //       nested: resolve(__dirname, 'nested/index.html')
+  //     }
+  //   }
+  // }
 })
