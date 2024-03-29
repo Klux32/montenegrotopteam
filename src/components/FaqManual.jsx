@@ -1,41 +1,25 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import { faq } from "../data/data";
 
 const FaqAuto = () => {
-    const [showItem, setShowItem] = useState(1);
-    
-    let faqData = faq;
-    let show;
-    console.log(faq)
-    
-    const showItemFunc = () =>{
-        if(showItem === faqData.length){
-            setShowItem(1);
-        }else{
+  const [showItem, setShowItem] = useState(1);
 
-            setShowItem(showItem + 1)
-        }
+  let faqData = faq;
+  let show;
 
-        faqData.map((item,key)=>{
-            key + 1 === showItem 
-            ? 
-            (item.show = true, item.collapse = true)
-            : 
-            (item.show = false, item.collapse = false)
-        })
-        console.log(showItem);
+  const showItemFunc = () => {
+    if (showItem === faqData.length) {
+      setShowItem(1);
+    } else {
+      setShowItem(showItem + 1);
     }
-    
-    
-    // useEffect(()=>{
-    //     clearTimeout(show)
-    // show = setTimeout(() => {
-    //     showItemFunc()
-    //     }, 10500);
-    // },[showItemFunc])
 
-
-
+    faqData.map((item, key) => {
+      key + 1 === showItem
+        ? ((item.show = true), (item.collapse = true))
+        : ((item.show = false), (item.collapse = false));
+    });
+  };
 
   return (
     <div className="accordion shadow" id="accordionExample">
@@ -43,7 +27,9 @@ const FaqAuto = () => {
         <div key={key} className="accordion-item">
           <h2 className="accordion-header">
             <button
-              className={`accordion-button ${item.collapse ? null : "collapsed"}`}
+              className={`accordion-button ${
+                item.collapse ? null : "collapsed"
+              }`}
               type="button"
               data-bs-toggle="collapse"
               data-bs-target={`#collapseOne${key}`}
@@ -55,11 +41,16 @@ const FaqAuto = () => {
           </h2>
           <div
             id={`collapseOne${key}`}
-            className={`accordion-collapse collapse ${item.show ? 'show' : null}`}
-            style={{transitionProperty:"all 5s ease"}}
+            className={`accordion-collapse collapse ${
+              item.show ? "show" : null
+            }`}
+            style={{ transitionProperty: "all 5s ease" }}
             data-bs-parent="#accordionExample"
           >
-            <div className="accordion-body" style={{transitionProperty:"all 5s ease"}}>
+            <div
+              className="accordion-body"
+              style={{ transitionProperty: "all 5s ease" }}
+            >
               {item.desc}
             </div>
           </div>

@@ -18,8 +18,6 @@ const FormControl = ({
     setData({ ...data, [e.target.name]: e.target.value });
   };
 
-  console.log(data);
-
   return (
     <div className={`col-12 mb-3`}>
       <label htmlFor={id} className="form-label mt-3">

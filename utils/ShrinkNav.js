@@ -25,7 +25,7 @@ export const navShrink = () => {
       }
     }
     
-    console.log(current)
+    // console.log(current)
     
 
   // sections.forEach((section) => {

@@ -4,13 +4,13 @@ import { ContainerFluid } from "../components/Containers";
 const FooterScreen = () => {
   return (
     <ContainerFluid style="text-bg-dark clear-top">
-      <div className="row">
-        <div className="col-6">Left Side</div>
-        <div className="col-6">Right Side</div>
+      <div className="row py-5">
+        <div className="col text-center">
+          Copyright &#169; 2024 Montenegro Top Team.
+        </div>
       </div>
     </ContainerFluid>
   );
 };
-
 
 export default FooterScreen;

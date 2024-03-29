@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {
   Navbar,
   Container,
@@ -16,19 +17,9 @@ const Header = () => {
     navShrink();
   };
 
-  // const clickHandle = (id) => {
-  //   console.log("klik");
-  //   const element = document.getElementById(id);
-  //   // console.log(element.offsetTop - 78.125);
-  //   window.scrollTo(0, parseInt(element.offsetTop) - 78.125);
-  //   // element.scrollBy(0, (element.offsetTop = -78.125));
-  //   // console.log(document.documentElement.scrollBy(0, -45));
-  //   // document.documentElement.scrollBy(0, -45);
-  //   // window.scrollBy(
-  //   // (document.body.scrollTop || document.documentElement.scrollTop) - 78.125,
-  //   //   50
-  //   // );
-  // };
+  const clickHandle = () => {
+    navShrink();
+  };
 
   return (
     <div className="navWrap">
@@ -42,7 +33,10 @@ const Header = () => {
           <Navbar.Brand href="#">
             <img id="logo" src={Logo} alt="Logo" className="navbar__logo" />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${"xl"}`} />
+          <Navbar.Toggle
+            aria-controls={`offcanvasNavbar-expand-${"xl"}`}
+            onClick={() => clickHandle()}
+          />
           <Navbar.Offcanvas
             id={`offcanvasNavbar-expand-${"xl"}`}
             aria-labelledby={`offcanvasNavbarLabel-expand-${"xl"}`}
@@ -50,7 +44,7 @@ const Header = () => {
           >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${"xl"}`}>
-                <h3 class="fw-bold m-0 text-gradient-yellow-darkYellow">
+                <h3 className="fw-bold m-0 text-gradient-yellow-darkYellow">
                   Montenegro Top Team
                 </h3>
               </Offcanvas.Title>

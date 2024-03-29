@@ -47,9 +47,9 @@ const ContactScreen = () => {
                 width="100%"
                 height="150"
                 style={{ border: "0" }}
-                allowfullscreen=""
+                allowFullScreen=""
                 loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
+                referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
               <div className="d-flex fs-1 mt-5 mb-3">
                 <FaLocationDot />
@@ -62,9 +62,9 @@ const ContactScreen = () => {
                 width="100%"
                 height="150"
                 style={{ border: "0" }}
-                allowfullscreen=""
+                allowFullScreen=""
                 loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
+                referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
           </div>
